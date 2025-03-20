@@ -1,0 +1,42 @@
+body {
+  font-family: monospace;
+}
+
+.flex-container {
+  background-color: #3f0f46;
+  width: 80%;
+  border-radius: 10px;
+  padding: 10px;
+  height: 400px;
+
+  display: flex;
+  flex-direction: row; /* determines the main axis */
+  justify-content: center; /* main axis */
+  align-items: center; /* cross axis */
+  gap: 16px;
+  /*  if we have too many boxes, this will put them on muliple rows insterad od squishing them  */
+  /*   flex-wrap: wrap; */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+
+  /* put the numbers in the center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one {
+  background-color: #ff5292;
+}
+
+.two {
+  background-color: #ffc540;
+}
+
+.three {
+  background-color: #37bcff;
+}

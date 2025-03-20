@@ -1,0 +1,28 @@
+/* Element selector */
+h1 {
+  background-color: pink;
+}
+
+/* class selector */
+
+.blueListItem {
+  background-color: blue;
+}
+
+/* ID selector */
+#specificItem {
+  background-color: green;
+}
+
+/* pseudo-selectors */
+
+li:hover {
+  background-color: yellow;
+}
+
+/* Box model styling */
+
+li {
+  border-style: solid;
+  margin: 10px;
+}
