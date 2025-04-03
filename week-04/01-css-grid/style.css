@@ -1,0 +1,55 @@
+body {
+  background-color: coral;
+}
+
+.content {
+  border: 1px solid lime;
+}
+
+.grid-container {
+  border: 2px solid purple;
+  /* display: flex; This is how we apply flex to a container. The default direction is flex-direction: row */
+  height: 600px;
+
+  /* display: grid sections out an element into a grid. It allows an element to be a grid. */
+  display: grid;
+
+  /* template columns/rows allows you to give a grid rows and columns  */
+  /* we define how many columns/rows we want by how many units we give the property */
+  /* fr is a fractional unit */
+
+  /* grid-template-columns: 200px 100px; We can use 'px' to define an absolute width for a column */
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(
+    5,
+    1fr
+  ); /* because our grid-container has a height set on it, the fractional units take up the grid-container height. If the container did not have a height, then each row would be the height of the element with the most content.*/
+
+  /* Gap allows us to make space between our rows and columns. It gives breathing room to our elements */
+  gap: 15px;
+}
+
+.header {
+  background-color: cadetblue;
+  grid-column: 1 / 4; /* grid-column tells the element which columns to occupy. In this style, the first number is "start at this column-start-position, the second number is "end at this column end position"*/
+  text-align: center;
+  padding: 20px;
+}
+
+.menu {
+  background-color: crimson;
+  grid-row: 2 / 5;
+  /* grid-row is very similar in that we've told it where to start and where to finish, on the different rows */
+}
+
+.written-stuff {
+  background-color: darkorange;
+  grid-column: 2/4;
+  grid-row: 2/5;
+}
+
+.footer {
+  background-color: khaki;
+  grid-row: 5;
+  grid-column: 1 / 4;
+}
