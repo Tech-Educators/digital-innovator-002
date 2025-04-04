@@ -1,0 +1,84 @@
+/* --- --- --- */
+/* Here are my default styles */
+/* This is for a good looking mobile view, but it translates to desktop */
+/* --- --- --- */
+body {
+  background-color: blanchedalmond;
+}
+
+.header {
+  background-color: rgb(33, 187, 135);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: medium;
+}
+
+.intro-section {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent-content-container {
+  background-color: chocolate;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.content-box {
+  background-color: blueviolet;
+  height: 300px;
+  width: 300px;
+  border-radius: 5%;
+}
+/* --- --- --- */
+/* Media Queries */
+/* --- --- --- */
+
+/* Media queries are a bit luke functions, or an if statement in CSS. */
+/* We say, "if these media conditions are true, then please apply these CSS rules! */
+
+/* This media query only applies between the widths of 375px and 425px */
+@media (min-width: 375px) and (max-width: 425px) {
+  /*  Inside of the query, we need to target CSS as normal */
+  .header {
+    background-color: chocolate;
+  }
+  .parent-content-container {
+    background-color: rgb(14, 164, 114);
+  }
+}
+
+/* Here we are saying: at the minimum screen width of 900px, do this CSS stuff */
+@media (min-width: 900px) {
+  .parent-content-container {
+    flex-direction: row;
+  }
+
+  .content-box {
+    height: 200px;
+    width: 200px;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+  }
+}
+
+/* the syntax is very similar to functions:
+function media(parameters){
+    do some code
+} */
