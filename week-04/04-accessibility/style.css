@@ -1,0 +1,48 @@
+/* Basic CSS */
+body {
+  background-color: #ccb0fd;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+
+button {
+  background-color: orange;
+}
+
+/* The 'hover' we see here is called a CSS pseudo-class. */
+/* It basically means, apply this CSS when this state is happening */
+button:hover {
+  background-color: aqua;
+  /* this next cursor property changes our mouse cursor in this class */
+  cursor: pointer;
+}
+
+/* However, when a keyboard user tabs to our button, 'hover' doesn't apply. We need :focus instead */
+button:focus {
+  background-color: forestgreen;
+}
+
+/* We can customise the outline which appears on an element when it's focused */
+.navbar a:focus {
+  color: red;
+  outline-color: orange;
+  outline-offset: 5px;
+  outline-width: 20px;
+  outline-style: solid;
+}
+
+/* Or we can blanket apply a :focus to everything! */
+*:focus {
+  outline: lime 2px solid;
+}
+
+/* this type of CSS selector, with two colons :: is knows as a pseudo-element */
+/* ::selection Could be useful for those with dyslexia or focus issues, to help them focus their gaze more on text they have highlighted */
+p::selection {
+  background-color: yellow;
+}

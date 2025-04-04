@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A11y</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>
+      We call it A11y because of the number of characters in Accessibility
+    </h1>
+
+    <!-- This navbar has got some custom CSS for when a user focuses on it -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#" aria-label="link to home page">Home</a></li>
+        <li><a href="#" aria-label="link to about page">About</a></li>
+        <li><a href="#" aria-label="link to products page">Products</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- these buttons have got tabindex, which makes the user tab in a WEIRD order, but that's just to show what you can do. -->
+    <button tabindex="2">Check me out second!</button>
+    <button tabindex="1" aria-label="the first button you can click">
+      Check me first!
+    </button>
+    <button tabindex="3">Check me third!</button>
+
+    <h2 title="Some really cool images down here!">Images</h2>
+    <p>For an image to appear it needs a `src` (an image source)</p>
+    <p>
+      But, for better accessibility we should ALWAYS, ALWAYS provide an `alt`
+      text
+    </p>
+    <p>Titles are fun too!</p>
+    <img
+      src="https://images.squarespace-cdn.com/content/56c207401d07c00b66446af9/4270c503-4b52-473e-b3d1-6509d45225fb/artwork+art+studio+Asheville?format=1500w&content-type=image%2Fjpeg"
+      alt="hand painted artwork of a pier at sunset."
+      title="What a nice painting!"
+      height="300"
+    />
+
+    <!-- forms should always have a label attached to an input! Placeholders help. -->
+    <form aria-label="a form for your full name">
+      <label for="firstName">Enter your first name:</label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="enter your first name"
+      />
+
+      <label for="surname">Enter your surname</label>
+      <input
+        type="text"
+        id="surname"
+        name="surname"
+        placeholder="enter surname!"
+      />
+      <input type="button" value="Submit me!" />
+    </form>
+  </body>
+</html>
