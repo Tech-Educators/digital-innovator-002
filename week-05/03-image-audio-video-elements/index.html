@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <title>HTML Media</title>
+  </head>
+  <body>
+    <h1>HTML MEDIA</h1>
+    <!-- images, sounds, videos -->
+    <h2>IMAGES</h2>
+    <!-- decorative images don't need an alt attribute -->
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/2010-kodiak-bear-1.jpg/960px-2010-kodiak-bear-1.jpg"
+      alt="Brown bear in the grass"
+    />
+    <img
+      src="./assets/panda.avif"
+      alt="Brown bear in the grass"
+      width="300"
+      height="200"
+    />
+    <h2>AUDIO</h2>
+    <audio src="./assets/ambient.mp3" controls loop></audio>
+
+    <h2>VIDEO</h2>
+    <video
+      src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      loop
+      width="500"
+      height="300"
+      muted
+      autoplay
+      controls
+    ></video>
+    <!-- for YouTube videos, click on Share > Embed > Copy iframe element -->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/G7KNmW9a75Y?si=376lEHHxGGH5TJYg"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>
