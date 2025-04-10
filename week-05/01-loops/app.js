@@ -54,4 +54,49 @@ for (let i = 0; i <= films.length; i++) {
   //TODO I want to log in the console the items in my array one by one
   console.log(films[i]);
 }
+
+//==================================================================
 //while loop --> a task we will repeat an indefinite amount of times
+
+//structure
+//keyword --> while
+// while (loop instructions){
+//task
+// }
+
+//example
+let counter = 0;
+
+//this is an infinite loop because the condition (the instructions) is always true
+while (counter <= 5) {
+  //TODO I want to log a counter on the console
+  console.log(counter);
+  counter++; //while loop will run forever, so make sure you have a break to stop them
+}
+
+//===================================================================
+// for ... of --> simplifies the syntax of a for loop, in the (instructions)
+for (let i = 0; i <= films.length; i++) {
+  //TODO I want to log in the console the items in my array one by one
+  console.log(films[i]);
+}
+
+for (let film of films) {
+  console.log(film);
+}
+
+//=====================================================================
+//loop method --> forEach()
+//this is an array method --> it only works with arrays
+for (let i = 0; i <= films.length; i++) {
+  //TODO I want to log in the console the items in my array one by one
+  console.log(films[i]);
+}
+
+// forEach(function () {
+//task
+// });
+
+films.forEach(function (film) {
+  console.log(film);
+});
