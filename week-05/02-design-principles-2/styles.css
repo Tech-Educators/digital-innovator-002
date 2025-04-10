@@ -1,0 +1,75 @@
+body {
+  background: linear-gradient(0.25turn, #0f77a4, #54ba06, #e3ee0c, #f69d3c);
+  height: 100dvh;
+  width: 100dvw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-card {
+  height: 40%;
+  width: 40%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+
+  font-size: 2rem;
+  color: #00128a;
+
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.my-discs {
+  background: linear-gradient(#f69d3c, #af977e);
+  height: 20%;
+  width: 20%;
+  border-radius: 50%;
+
+  position: absolute;
+  z-index: 0;
+  border: 1px, solid, white;
+}
+
+.one {
+  top: 50%;
+  left: 20%;
+}
+
+.two {
+  bottom: 50%;
+  right: 20%;
+}
+
+.my-second-card {
+  height: 40%;
+  width: 40%;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  rotate: 25deg;
+  z-index: -10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+
+  font-size: 2rem;
+  color: #00128a;
+
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
