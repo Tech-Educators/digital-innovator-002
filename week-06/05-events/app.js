@@ -59,7 +59,7 @@ function backgroundChanger(colour) {
   document.body.style.backgroundColor = colour;
 }
 
-// --- But here is one way I would do it, which makes use of classes on the buttons, gets them as an array, and uses their textContent as the parameter passed to the function.
+// --- But here is one way I would do it, which makes use of classes on the buttons, gets them as an array, and uses their name attribute as the parameter passed to the function.
 const backgroundChangerButtons = document.querySelectorAll(
   ".background-changer-button"
 ); // <- get all my buttons
@@ -69,7 +69,7 @@ console.log(backgroundChangerButtons);
 backgroundChangerButtons.forEach(function (button) {
   // Add an event listener to each one:
   button.addEventListener("click", function () {
-    // and in each ones listener, call the function with the current "text content" as a colour
-    backgroundChanger(button.textContent);
+    // and in each ones listener, call the function with the current "name" as a colour
+    backgroundChanger(button.name);
   });
 });
