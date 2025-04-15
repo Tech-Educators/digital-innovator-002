@@ -1,0 +1,18 @@
+.thumbnails-container {
+  display: flex;
+  height: 10rem;
+  width: 80%;
+
+  overflow: scroll;
+
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+.thumbnails-container img {
+  /* If you wanted to target each individual image inside of the container, you'd use a selector like this */
+}
+
+h3 {
+  margin-top: 2rem;
+}
