@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: cadetblue;
+  padding: 2rem;
+}
+
+h1 {
+  padding: 0.5rem;
+}
+
+.myAudioPlayer {
+  background-color: blanchedalmond;
+  border: 2px solid purple;
+  padding: 1rem;
+}
+
+/* element selector */
+p {
+}
+
+/* id selector */
+#playBtn {
+}
+
+/* class selector */
+.myAudioPlayer {
+}
