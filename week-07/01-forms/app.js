@@ -5,7 +5,7 @@ const myForm = document.querySelector("form");
 // console.log(myForm); // this shows me that I have selected my form correctly
 
 // second, we have attached an event listener to the form:
-myForm.addEventListener("submit", handleSubmit);
+myForm.addEventListener("submit", handleSubmitWithEventTarget);
 
 // third, we've got an event handler function, which takes the event as a parameter by default, and before anything else prevents the default behaviour
 function handleSubmit(event) {
@@ -33,3 +33,14 @@ function handleSubmit(event) {
 }
 
 // Note: By default, any function which is used as an event hendler gets passed a thing called 'event' as a parameter by default
+
+// An alternative way to getting our form data, with the 'event.target' method.
+// This method is quite useful if you only have one or two form fields, but any more than that you should use the FormData and Object.fromEntries magical spell.
+function handleSubmitWithEventTarget(event) {
+  event.preventDefault();
+  // We have access to the event object.
+  console.log(event);
+  // we can assign the results to a variable:
+  const userFirstName = event.target.firstName.value; // <- we have assigned the user written value, from the firstName input, from the event.target (which is the form) to a variable here! Whew!
+  const userPassword = event.target.userPassword.value;
+}
