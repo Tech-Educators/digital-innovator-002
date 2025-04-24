@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(181, 217, 119);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#userPassword {
+  padding: 10px;
+}
