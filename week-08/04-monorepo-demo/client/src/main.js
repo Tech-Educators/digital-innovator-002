@@ -3,6 +3,8 @@ console.log("My vite project");
 // https://jsonplaceholder.typicode.com/posts/1
 async function getPosts() {
   console.log("I am getPosts, and I am about to fetch some data");
+  // We'll change the fetch URL below to our deployed server URL on Render!
+  // https://di002-monorepo-project-server.onrender.com/books
   const response = await fetch("http://localhost:8080/books");
   console.log(response);
   const data = await response.json();
