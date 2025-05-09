@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Project</title>
+    <script type="module" src="/src/main.js" defer></script>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <h1>My Books Project</h1>
+
+    <form id="book-form">
+      <label for="bookTitle">Enter the book title</label>
+      <input
+        type="text"
+        id="bookTitle"
+        name="bookTitle"
+        placeholder="Book title..."
+      />
+
+      <label for="bookAuthor">Enter the book author</label>
+      <input
+        type="text"
+        id="bookAuthor"
+        name="bookAuthor"
+        placeholder="Book author..."
+      />
+
+      <label for="bookSynopsis">Enter the book synopsis</label>
+      <input
+        type="text"
+        id="bookSynopsis"
+        name="bookSynopsis"
+        placeholder="Book synopsis..."
+      />
+
+      <label for="bookYear">Enter the publish year</label>
+      <input
+        type="number"
+        id="bookYear"
+        name="bookYear"
+        min="0"
+        max="2025"
+        placeholder="Book year"
+      />
+
+      <input type="submit" value="Submit Book" />
+    </form>
+
+    <section id="books-container"></section>
+  </body>
+</html>
