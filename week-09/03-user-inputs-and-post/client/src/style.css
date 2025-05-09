@@ -1,0 +1,14 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+
+label {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+body {
+  background-color: cornflowerblue;
+}
