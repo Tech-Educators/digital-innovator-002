@@ -21,6 +21,8 @@ async function init() {
   model = await tmImage.load(modelURL, metadataURL);
   maxPredictions = model.getTotalClasses();
 
+  console.log(model);
+
   // Convenience function to setup a webcam
   const flip = true; // whether to flip the webcam
   webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
@@ -47,9 +49,32 @@ async function loop() {
 async function predict() {
   // predict can take in an image, video or canvas html element
   const prediction = await model.predict(webcam.canvas);
+  // 'prediction' is an array of objects, and each object has got the properties: prediction, classname
+
   for (let i = 0; i < maxPredictions; i++) {
-    const classPrediction =
+    let classPrediction =
       prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+
+    // We can use those properties to check if:
+    // 1- is the probability above a certain threshold
+    // 2- if the threshold is met, do something if the classname matches
+
+    // Here in these nested if statements we're just simply changing the text displayed on screen:
+    if (prediction[i].probability > 0.5) {
+      if (prediction[i].className == "Thumbs Up") {
+        classPrediction = "👍";
+      }
+      if (prediction[i].className == "Thumbs Down") {
+        classPrediction = "BOO!";
+      }
+      if (prediction[i].className == "No thumb") {
+        classPrediction = "❌ ";
+      }
+      if (prediction[i].className == "Halfway thumb") {
+        classPrediction = "CAESAR";
+      }
+    }
+
     labelContainer.childNodes[i].innerHTML = classPrediction;
   }
 }
